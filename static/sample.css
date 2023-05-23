@@ -1,0 +1,95 @@
+.form-control{
+    box-sizing: border-box;
+    width:100%;
+}
+
+.index{
+    margin: 30px;
+    text-align: center;
+    padding:0%;
+}
+
+p{
+    padding : 0%;
+    margin:0%;
+}
+
+.bb{
+    margin: 5%;
+}
+.area{
+    width: 30px;
+    ;
+}
+
+input[type="number"]{
+    -moz-appearance: textfield;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        margin: 0;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+}
+
+.player{
+    margin:0%;
+}
+.move_result{
+    display: inline;
+    margin-right: 0%;
+}
+
+.DB_table{
+    margin:auto;
+    text-align: center;
+}
+
+.top_var{
+    background-color: rgb(168, 168, 168);
+    padding :20px;
+    position: fixed;
+    width: 100%;
+    margin:0%;
+    top:0;
+}
+
+.action_move{
+    background-color: rgb(168, 168, 168);
+    padding :20px;
+}
+
+span{
+    display:inline-block;
+    margin-right: 10px;
+}
+
+.input_search{
+    text-align: right;
+}
+.search{
+    box-sizing: border-box;
+    width: 100%;
+}
+.submit_search{
+    font-size: 100%;
+}
+.cant_search{
+    text-align: center;
+    font-size: 200%;
+    margin:auto;
+}
+.search_type{
+    text-align: center;
+    font-size: 200%;
+}
+
+.all_body{
+    margin-top:80px;
+    text-align: center;
+}
+
+.delete_button{
+    margin: 20px;
+    font-size: 100%;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/sample.css" rel="stylesheet">
+    <title>履歴削除</title>
+</head>
+<body>
+    <div class="top_var">
+        <span>
+            <a href="/">トップページ</a>
+        </span>
+        <span>
+            <a href="/result">文章履歴</a>
+        </span>
+        <span>
+            <a href="/result/search_DB">文章検索<a/>
+        </span>
+    </div>
+    <div class="all_body">
+        <form method="POST">
+            <button class="delete_button">履歴削除</button>
+        </form>
+        {% if data_exist=="True" %}
+            <table border="1" class="DB_table">
+                <tr><th>文章</th><th>ポジティブ度</th></tr>
+                {% for i,j in actions%}
+                <tr><td>{{i}}</td><td>{{j}}</td></tr>
+                {% endfor %}
+        {% elif data_exist=="False" %}
+            <div class="cant_search">
+                <a>履歴は存在しません</a>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

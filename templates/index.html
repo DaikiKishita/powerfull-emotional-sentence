@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章感情力勝負</title>
+    <link href="/static/sample.css" rel="stylesheet">
+</head>
+<body>
+    <div class="top_var">
+        <span>
+            <a href="/result">文章履歴</a>
+        </sapn>
+    </div>
+    <div class="all_body">
+        <div class="index">
+            <h1>文章感情力勝負</h1>
+            <form method="POST">
+                <div class="player1">
+                    <p class="player">Player1</p>
+                    <input id="word1" name="word1" placeholder="入力してください" type="text" class="form-control",required=True>
+                </div>
+                <div  class="player2">
+                    <p class="player">Player2</p>
+                    <input id="word2" name="word2" placeholder="入力してください" type="text" class="form-control",required=True>
+            </div>
+            <div>
+                <p>範囲
+                    <input id="s" name="s" type="number" maxlength="2" class="area" value="0">
+                    %~
+                    <input id="e" name="e" type="number" maxlength="2" class="area" value="100">%
+                </p>
+            </div>
+            <button type="submit" class="bb">勝負！！！</button>
+            <p>{{result_text|safe}}</p>
+            <p>player1:{{result1|safe}}</p>
+            <p>player2:{{result2|safe}}</p>
+            <h1>{{result_win|safe}}</h1>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

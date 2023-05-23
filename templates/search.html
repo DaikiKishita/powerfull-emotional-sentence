@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/sample.css" rel="stylesheet">
+    <title>履歴検索</title>
+</head>
+
+<body>
+    <div class="top_var">
+        <span>
+            <a href="/">ページトップ</a>
+        </span style="display:inline-block;">
+        <span>
+            <a href="/result">文章履歴</a>
+        </span>
+        <span>
+            <a href="/result/delete_DB">履歴削除</a>
+        </span>
+    </div>
+    <div class="all_body">
+        <div class="search_type">
+        <form method="POST">
+            <select name="search_type">
+                <option>検索タイプを選んでください</option>
+                <option value="perfect_search">文章検索</option>
+                <option value="part_search">部分検索</option>
+            </select>
+        </div>
+        <div class="input_search"> 
+            <input id="search" name="search" type="txt" class="search" placeholder="検索したい文章を入力してください">
+            <button type="submit" class="submit_search">検索</button>
+        </form>
+        </div>
+        {% if search_OK=="1" %}
+        <table border="1" class="DB_table">
+            <tr><th>検索文章</th><th>ポジティブ度</th></tr>
+            {% for i,j in actions%}
+            <tr><td>{{i}}</td><td>{{j}}</td></tr>
+            {% endfor %}
+        </table>
+        {% elif search_OK=="0" %}
+        <div class="cant_search"> 
+            <a>該当する文章がありませんでした</a>
+        </div>
+        {% else %}
+        <div class="cant_search">
+            <a>検索タイプを選んでください</a>
+        </div>
+        {% endif %}
+    </div>
+    </body>
+</html>
